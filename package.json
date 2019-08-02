@@ -1,0 +1,38 @@
+{
+    "publisher": "Ocelot Software",
+    "name": "mdcomp-scaffolding",
+    "displayName": "mdcomp-scaffolding",
+    "description": "Generates convention-based C# classes for MDComp Azure Functions",
+    "version": "0.0.1",
+    "repository": "https://github.com/nfmccrina/mdcomp-scaffolding",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:mdcomp-scaffolding.generateEntity"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "mdcomp-scaffolding.generateEntity",
+                "title": "MDComp: Generate Entity"
+            }
+        ]
+    },
+    "scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+    "main": "out/extension.js",
+    "devDependencies": {
+        "@types/node": "^12.6.9",
+        "@types/vscode": "^1.36.0",
+        "tslint": "^5.18.0",
+        "typescript": "^3.5.3"
+    }
+}
